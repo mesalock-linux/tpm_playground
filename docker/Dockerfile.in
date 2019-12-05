@@ -25,7 +25,6 @@ ENV TPM2TOOLS_TCTI tabrmd:bus_name=com.intel.tss2.Tabrmd
 ADD start_tpm.sh setup_mock_tpm.sh /usr/local/bin/
 ADD setup_tpm_in_docker.sh /
 RUN su {username} -c "bash /setup_tpm_in_docker.sh"
-RUN python3 -m pip install 
 
 USER {username}
 WORKDIR /home/{username}
